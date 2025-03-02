@@ -6,9 +6,9 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Become a Partner", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Become a Partner", href: "/routes/become-partner" },
+  { name: "About Us", href: "/routes/about-us" },
+  { name: "Contact", href: "/routes/contact-us" },
   { name: "Company", href: "#" },
 ];
 
@@ -20,7 +20,7 @@ export default function Header() {
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
