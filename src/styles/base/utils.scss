@@ -1,0 +1,52 @@
+// Custom Letter Spacing
+.letter-spacing-extra {
+    letter-spacing: 0.4em;
+  }
+  
+  // Custom Box Shadows
+  .box-shadow-neon-glow {
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.8);
+  }
+
+  @keyframes neon-glow {
+    0%, 100% {
+      box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.8); // Full glow
+    }
+    50% {
+      box-shadow: 0px 4px 15px rgba(255, 255, 255, 0); // No glow
+    }
+  }
+  
+  .box-shadow-neon-glow-timed {
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.8); // Default glow
+    animation: neon-glow 2s infinite; // Glow animation with 0.5s cycle
+  }
+  
+
+$default-glow: #fff; // Initial white glow
+$hover-glow: #0fa;  // Hover green glow
+
+.neonText {
+  color: $default-glow; // Set the text color to white initially
+  text-shadow: 
+    0 0 10px $hover-glow,  // Green shadow
+    0 0 20px $hover-glow,
+    0 0 30px $hover-glow,
+    0 0 40px $default-glow, // White glow
+    0 0 60px $default-glow,
+    0 0 100px $default-glow,
+    0 0 150px $default-glow;
+  transition: text-shadow 0.5s ease, color 0.5s ease;
+
+  &:hover {
+    color: $hover-glow; // Change text color to green on hover
+    text-shadow: 
+      0 0 10px $default-glow, // White shadow
+      0 0 20px $default-glow,
+      0 0 30px $default-glow,
+      0 0 40px $hover-glow, // Green glow
+      0 0 60px $hover-glow,
+      0 0 100px $hover-glow,
+      0 0 150px $hover-glow;
+  }
+}

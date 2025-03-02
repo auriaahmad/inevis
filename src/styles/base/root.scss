@@ -1,0 +1,22 @@
+// root.scss
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+  // Custom Colors
+  :root {
+    --color-primary-black: #000000;
+    --color-charcoal-gray: #333333;
+    --color-dim-gray: #666666;
+    --color-light-gray: #CCCCCC;
+    --color-gainsboro: #DDDDDD;
+  
+    --color-dark-green: #006400;
+    --color-forest-green: #228B22;
+    --color-sea-green: #2E8B57;
+    --color-medium-sea-green: #3CB371;
+    --color-pale-green: #98FB98;
+  }
