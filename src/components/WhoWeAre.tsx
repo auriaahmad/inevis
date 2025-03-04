@@ -34,7 +34,7 @@ export default function WhoWeAre() {
   return (
     <section className="py-20 bg-gradient-to-t from-[#D7E5F8] to-white">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-12">Who We Are</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Who We Are</h2>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}

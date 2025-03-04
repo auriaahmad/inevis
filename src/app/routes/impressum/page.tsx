@@ -1,10 +1,10 @@
 import React from "react";
 
-const Imprint: React.FC = () => {
+const Impressum: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 pt-24 text-justify text-gray-800">
       {/* Page Title */}
-      <h1 className="text-3xl font-bold mb-6">Imprint</h1>
+      <h1 className="text-3xl font-bold mb-6">Impressum</h1>
 
       {/* Company & Address */}
       <p className="mb-4">
@@ -104,4 +104,4 @@ const Imprint: React.FC = () => {
   );
 };
 
-export default Imprint;
+export default Impressum;

@@ -54,7 +54,7 @@ export default function Footer() {
               <li><Link href="/routes/general-terms" className="hover:text-white">General Terms & Conditions</Link></li>
               <li><Link href="/routes/cancellation-policy" className="hover:text-white">Cancellation Policy</Link></li>
               <li><Link href="/routes/data-protection" className="hover:text-white">Data Protection</Link></li>
-              <li><Link href="/routes/imprint" className="hover:text-white">Imprint</Link></li>
+              <li><Link href="/routes/impressum" className="hover:text-white">Impressum</Link></li>
             </ul>
           </div>
 

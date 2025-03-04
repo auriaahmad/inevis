@@ -53,9 +53,9 @@ export default function Header() {
 
         {/* Login Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="#" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
+          {/* <Link href="#" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
             Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
+          </Link> */}
         </div>
       </nav>
 
@@ -93,9 +93,9 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link href="#" className="block text-sm font-semibold text-gray-900 hover:text-indigo-600">
+            {/* <Link href="#" className="block text-sm font-semibold text-gray-900 hover:text-indigo-600">
               Log in
-            </Link>
+            </Link> */}
           </div>
         </DialogPanel>
       </Dialog>

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div 
-      className="relative min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
+      className="relative shadow-md min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
       style={{ backgroundImage: "url('/assets/telecom.jpg')" }}
     >
       {/* White Tint Overlay */}
@@ -23,11 +23,11 @@ export default function Hero() {
         <div className="mt-10 flex items-center justify-start gap-x-6">
           <Link
             href="#"
-            className="rounded-md bg-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-indigo-500"
+            className="rounded-md bg-teal-400 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-teal-500"
           >
-            Get started
+            Contact Us
           </Link>
-          <Link href="#" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
+          <Link href="/routes/about-us" className="text-sm font-semibold text-gray-900 hover:text-indigo-600">
             Learn more <span aria-hidden="true">→</span>
           </Link>
         </div>
