@@ -16,19 +16,19 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="mt-4 flex space-x-4">
-            <Link href="#" className="hover:text-white">
+            <Link href="/routes/" className="hover:text-white">
               <FaFacebookF size={20} />
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="/routes/" className="hover:text-white">
               <FaInstagram size={20} />
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="/routes/" className="hover:text-white">
               <FaXTwitter size={20} />
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="/routes/" className="hover:text-white">
               <FaGithub size={20} />
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="/routes/" className="hover:text-white">
               <FaYoutube size={20} />
             </Link>
           </div>
@@ -50,11 +50,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white">Legal</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link href="#" className="hover:text-white">Terms of Use</Link></li>
-              <li><Link href="#" className="hover:text-white">General Terms & Conditions</Link></li>
-              <li><Link href="#" className="hover:text-white">Cancellation Policy</Link></li>
-              <li><Link href="#" className="hover:text-white">Data Protection</Link></li>
-              <li><Link href="#" className="hover:text-white">Imprint</Link></li>
+              <li><Link href="/routes/terms-of-use" className="hover:text-white">Terms of Use</Link></li>
+              <li><Link href="/routes/general-terms" className="hover:text-white">General Terms & Conditions</Link></li>
+              <li><Link href="/routes/cancellation-policy" className="hover:text-white">Cancellation Policy</Link></li>
+              <li><Link href="/routes/data-protection" className="hover:text-white">Data Protection</Link></li>
+              <li><Link href="/routes/imprint" className="hover:text-white">Imprint</Link></li>
             </ul>
           </div>
 
@@ -62,9 +62,9 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white">Support</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link href="#" className="hover:text-white">Help Center</Link></li>
-              <li><Link href="#" className="hover:text-white">FAQs</Link></li>
-              <li><Link href="#" className="hover:text-white">Contact Support</Link></li>
+              <li><Link href="/routes/help-center" className="hover:text-white">Help Center</Link></li>
+              <li><Link href="/routes/faqs" className="hover:text-white">FAQs</Link></li>
+              <li><Link href="/routes/contact-us" className="hover:text-white">Contact Support</Link></li>
             </ul>
           </div>
         </div>

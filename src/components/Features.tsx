@@ -25,7 +25,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-gradient-to-b from-[#D7E5F8] to-white">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
           Why Choose Us?

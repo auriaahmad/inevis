@@ -9,7 +9,7 @@ const navigation = [
   { name: "Become a Partner", href: "/routes/become-partner" },
   { name: "About Us", href: "/routes/about-us" },
   { name: "Contact", href: "/routes/contact-us" },
-  { name: "Company", href: "#" },
+  { name: "Company", href: "/" },
 ];
 
 export default function Header() {
@@ -23,9 +23,9 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+              src="/logo/logoNav.png"
               alt="Logo"
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </Link>
         </div>
