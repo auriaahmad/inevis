@@ -22,7 +22,7 @@ const AboutUs = () => {
             More importantly, however, it is crucial to us that you always feel supported in an optimal way. At our headquarters in Frankfurt and our branch office in Cologne, we constantly develop customized distribution models and promotion campaigns for our partners. Because our goal is your success.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Talk to us. Trust inevis as a competent partner at your side. It's worth it!
+            Talk to us. Trust inevis as a competent partner at your side. It&quot;s worth it!
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
@@ -32,7 +32,7 @@ const AboutUs = () => {
               className={`rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 ${index === 0 ? "col-span-2 row-span-2" : ""
                 }`}
             >
-              <img
+              <Image
                 src={src}
                 alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
@@ -70,7 +70,7 @@ const AboutUs = () => {
       <div className="container mx-auto px-6 lg:px-20 mt-20 pb-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center">Our team</h2>
         <p className="text-lg text-gray-600 text-center mb-10">
-          We're a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.
+          We&apos;re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {Array.from({ length: 4 }).map((_, index) => (

@@ -1,5 +1,5 @@
 {
-  "name": "auctos_ai",
+  "name": "inevis",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,8 +16,8 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
-    "auctos_ai": "file:",
     "framer-motion": "^12.4.10",
+    "inevis": "file:",
     "next": "^15.1.4",
     "next-seo": "^6.6.0",
     "react": "^19.0.0",

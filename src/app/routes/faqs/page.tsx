@@ -72,7 +72,7 @@ const FAQsPage: React.FC = () => {
       {/* FAQs List */}
       <div className="space-y-4">
         {filteredFaqs.length > 0 ? (
-          filteredFaqs.map((faq, index) => {
+          filteredFaqs.map((faq) => {
             // We need the original index for toggling
             // so find the original in the initialFaqs array
             const originalIndex = initialFaqs.indexOf(faq);
