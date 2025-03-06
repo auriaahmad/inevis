@@ -11,9 +11,9 @@ const Impressum: React.FC = () => {
         <p className="mb-4">
           <strong>inevis GmbH</strong>
           <br />
-          Hohenstaufenring 62
+          Westendstraße 16-22
           <br />
-          50674 Köln
+          60325 Frankfurt am Main
         </p>
 
         {/* Contact Info */}
@@ -56,14 +56,18 @@ const Impressum: React.FC = () => {
         {/* Tax ID */}
         <p className="mb-4">
           <strong>
-            Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+            Umsatzsteuer-Identifikationsnummer
+            <br />
+            gemäß § 27 a Umsatzsteuergesetz: DE 271999769
           </strong>{" "}
-          DE 271999769
+
         </p>
 
         {/* Register Info */}
         <p className="mb-4">
-          <strong>Registergericht:</strong> Amtsgericht Frankfurt am Main
+          <strong>Registergericht:</strong>
+          <br />
+          Amtsgericht Frankfurt am Main
           <br />
           <strong>Registernummer:</strong> HRB 88160
         </p>
@@ -87,19 +91,7 @@ const Impressum: React.FC = () => {
         {/* Legal Notice */}
         <h2 className="text-xl font-semibold mt-6">Rechtliche Hinweise:</h2>
         <p className="mb-4">
-          Wir übernehmen keine Haftung für die Inhalte, die sich auf diesen
-          Webseiten oder über gesetzte Links auf anderen Seiten befinden. Für die
-          Aktualität oder Richtigkeit dieser Seiten sowie für die Aktualität oder
-          Vollständigkeit der Daten der Reparaturauskunft und der Reparaturannahme
-          wird keine Gewähr geleistet. Wir geben keine Gewähr über die
-          Erreichbarkeit der Webseiten. Sowohl Inhalte, Erscheinungsform als auch
-          die Struktur der Webseiten können jederzeit ohne vorherige Ankündigung
-          geändert werden. Ein Anspruch auf die Verfügbarkeit einzelner oder aller
-          Seiten besteht nicht. Urheberrechte Das Verändern, Bearbeiten,
-          Modifizieren oder die Weitergabe an Dritte dieser Seiten im Ganzen oder
-          in Teilen, in gestalterischer oder inhaltlichen Weise ist nicht
-          gestattet. Ausgeführte Warenzeichen und Markennamen sind Eigentum ihrer
-          jeweiligen Inhaber.
+          Wir übernehmen keine Haftung für die Inhalte, die sich auf diesen Webseiten oder über gesetzte Links auf anderen Seiten befinden. Für die Aktualität oder Richtigkeit dieser Seiten sowie für die Aktualität oder Vollständigkeit der Daten der Reparaturauskunft und der Reparaturannahme wird keine Gewähr geleistet. Wir geben keine Gewähr über die Erreichbarkeit der Webseiten. Sowohl Inhalte, Erscheinungsform als auch die Struktur der Webseiten können jederzeit ohne vorherige Ankündigung geändert werden. Ein Anspruch auf die Verfügbarkeit einzelner oder aller Seiten besteht nicht. Urheberrechte Das Verändern, Bearbeiten, Modifizieren oder die Weitergabe an Dritte dieser Seiten im Ganzen oder in Teilen, in gestalterischer oder inhaltlichen Weise ist nicht gestattet. Ausgeführte Warenzeichen und Markennamen sind Eigentum ihrer jeweiligen Inhaber.
         </p>
       </div>
     </div>
