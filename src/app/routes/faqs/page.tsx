@@ -55,55 +55,57 @@ const FAQsPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 pt-24 text-gray-800">
-      <h1 className="text-3xl font-bold mb-8">Frequently Asked Questions</h1>
+    <div className="bg-gradient-to-br from-[#D7E5F8] to-white pt-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 pt-24 text-gray-800">
+        <h1 className="text-3xl font-bold mb-8">Frequently Asked Questions</h1>
 
-      {/* Search Bar */}
-      <div className="mb-6">
-        <input
-          type="text"
-          placeholder="Search FAQs..."
-          className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+        {/* Search Bar */}
+        <div className="mb-6">
+          <input
+            type="text"
+            placeholder="Search FAQs..."
+            className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
 
-      {/* FAQs List */}
-      <div className="space-y-4">
-        {filteredFaqs.length > 0 ? (
-          filteredFaqs.map((faq) => {
-            // We need the original index for toggling
-            // so find the original in the initialFaqs array
-            const originalIndex = initialFaqs.indexOf(faq);
+        {/* FAQs List */}
+        <div className="space-y-4">
+          {filteredFaqs.length > 0 ? (
+            filteredFaqs.map((faq) => {
+              // We need the original index for toggling
+              // so find the original in the initialFaqs array
+              const originalIndex = initialFaqs.indexOf(faq);
 
-            return (
-              <div
-                key={faq.question}
-                className="border-b border-gray-200 pb-4 cursor-pointer"
-              >
+              return (
                 <div
-                  className="flex justify-between items-center"
-                  onClick={() => toggleFAQ(originalIndex)}
+                  key={faq.question}
+                  className="border-b border-gray-200 pb-4 cursor-pointer"
                 >
-                  <h2 className="text-lg font-medium">
-                    {faq.question}
-                  </h2>
-                  <span className="text-2xl font-bold">
-                    {openIndices[originalIndex] ? "−" : "+"}
-                  </span>
+                  <div
+                    className="flex justify-between items-center"
+                    onClick={() => toggleFAQ(originalIndex)}
+                  >
+                    <h2 className="text-lg font-medium">
+                      {faq.question}
+                    </h2>
+                    <span className="text-2xl font-bold">
+                      {openIndices[originalIndex] ? "−" : "+"}
+                    </span>
+                  </div>
+                  {openIndices[originalIndex] && (
+                    <p className="mt-2 text-gray-600">
+                      {faq.answer}
+                    </p>
+                  )}
                 </div>
-                {openIndices[originalIndex] && (
-                  <p className="mt-2 text-gray-600">
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-            );
-          })
-        ) : (
-          <p>No FAQs found for your search.</p>
-        )}
+              );
+            })
+          ) : (
+            <p>No FAQs found for your search.</p>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const navigation = [
   { name: "Become a Partner", href: "/routes/become-partner" },
   { name: "About Us", href: "/routes/about-us" },
   { name: "Contact", href: "/routes/contact-us" },
-  { name: "Company", href: "/" },
+  { name: "Portfolio", href: "/routes/portfolio" },
 ];
 
 export default function Header() {
@@ -26,7 +26,8 @@ export default function Header() {
             <Image
               src="/logo/logoNav.png"
               alt="Logo"
-              className="h-10 w-auto"
+              width={180} // Specify the width in pixels
+              height={128} // Specify the height in pixels
             />
           </Link>
         </div>

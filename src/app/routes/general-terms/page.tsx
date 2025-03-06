@@ -2,7 +2,7 @@ import React from "react";
 
 const GeneralTermsAndConditions: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 pt-24 text-gray-800 text-justify">
+    <div className="bg-gradient-to-br from-[#D7E5F8] to-white pt-10">    <div className="max-w-4xl mx-auto px-6 py-12 pt-24 text-gray-800 text-justify">
       <h1 className="text-3xl font-bold mb-6">General Terms and Conditions of Business</h1>
 
       <section>
@@ -213,6 +213,7 @@ const GeneralTermsAndConditions: React.FC = () => {
           inevis GmbH, 60329 Frankfurt am Main.
         </p>
       </section>
+    </div>
     </div>
   );
 };

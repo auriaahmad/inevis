@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div 
+    <div
       className="relative shadow-md min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
       style={{ backgroundImage: "url('/assets/telecom.jpg')" }}
     >
@@ -12,11 +12,10 @@ export default function Hero() {
       {/* Content (Aligned Left) */}
       <div className="relative z-10 max-w-2xl">
         <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
-          Data to enrich your online business
+          Intelligent Software Solutions for Telecom Networks
         </h1>
         <p className="mt-8 text-lg text-gray-700 sm:text-xl">
-          Anim aute id magna aliqua ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. 
-          Elit sunt amet fugiat veniam occaecat.
+          <span className='text-teal-500 font-bold text-xl'>&ldquo;inevis&rdquo;</span> is a pioneering telecom software company dedicated to enhancing network performance, automation, and real-time analytics.
         </p>
 
         {/* CTA Buttons */}

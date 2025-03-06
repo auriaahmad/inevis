@@ -1,11 +1,13 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperClass } from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
 import { FaStar, FaCheck, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useRef } from "react";
+
 
 const testimonials = [
   {
@@ -59,8 +61,8 @@ const BecomePartner = () => {
       </section>
 
 
-      <section className="bg-gradient-to-bl from-[#D7E5F8] min-h-[1/2] to-white py-10">
-        <div className="max-w-7xl mx-auto ">
+      <section className="bg-gradient-to-bl from-[#D7E5F8] min-h-screen to-white py-36">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">
             Hear From Our Partners
           </h2>
@@ -89,18 +91,14 @@ const BecomePartner = () => {
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
-            onSwiper={(swiper) => {
-              setTimeout(() => {
-                if (swiper.params.navigation && typeof swiper.params.navigation === "object") {
-                  const navigation = swiper.params.navigation as { prevEl: HTMLElement; nextEl: HTMLElement };
-                  navigation.prevEl = prevRef.current!;
-                  navigation.nextEl = nextRef.current!;
-                  swiper.navigation.init();
-                  swiper.navigation.update();
-                }
-              });
-            }}
-
+            onSwiper={(swiper: SwiperClass) => {
+              if (typeof swiper.params.navigation === "object") {
+                swiper.params.navigation.prevEl = prevRef.current!;
+                swiper.params.navigation.nextEl = nextRef.current!;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+            }}            
             breakpoints={{
               320: { slidesPerView: 1 },
               768: { slidesPerView: 2 },

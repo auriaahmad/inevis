@@ -12,17 +12,16 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="isolate bg-white px-4 sm:px-6 lg:px-8 py-24 sm:py-32 flex justify-center">
+    <div className="isolate bg-gradient-to-br from-[#D7E5F8] to-white px-4 sm:px-6 lg:px-8 py-24 sm:py-32 flex justify-center">
       <div className="w-full max-w-4xl lg:w-3/5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="bg-gray-100 p-8 rounded-lg shadow-md">
+          <div className="bg-gradient-to-tl from-[#D7E5F8] to-white p-8 rounded-lg shadow-md">
             <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
               Get in touch
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Proin volutpat consequat porttitor cras nullam gravida at.
-              Orci molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              Do you have any questions? Talk to us!
+
             </p>
             <div className="mt-6 space-y-4">
               <div className="flex items-center gap-3">
@@ -97,26 +96,24 @@ export default function ContactForm() {
                 <Switch
                   checked={agreed}
                   onChange={setAgreed}
-                  className={`${
-                    agreed ? "bg-indigo-600" : "bg-gray-200"
-                  } relative inline-flex h-6 w-11 items-center rounded-full transition-colors`}
+                  className={`${agreed ? "bg-teal-400" : "bg-gray-200"
+                    } relative inline-flex h-6 w-11 items-center rounded-full transition-colors`}
                 >
                   <span className="sr-only">Agree to terms</span>
                   <span
-                    className={`${
-                      agreed ? "translate-x-6" : "translate-x-1"
-                    } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+                    className={`${agreed ? "translate-x-6" : "translate-x-1"
+                      } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
                   />
                 </Switch>
                 <span className="text-sm text-gray-600">
                   By selecting this, you agree to our
-                  <a href="#" className="font-semibold text-indigo-600">&nbsp;privacy policy.</a>
+                  <a href="/routes/data-protection" className="font-semibold text-indigo-600">&nbsp;privacy policy.</a>
                 </span>
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-indigo-600 px-3.5 py-2.5 text-white rounded-md shadow hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
+                  className="w-full bg-teal-400 px-3.5 py-2.5 text-white rounded-md shadow hover:bg-teal-500 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
                 >
                   Send message
                 </button>

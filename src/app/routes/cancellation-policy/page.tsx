@@ -2,6 +2,8 @@ import React from "react";
 
 const CancellationPolicy: React.FC = () => {
   return (
+    <div className="bg-gradient-to-br from-[#D7E5F8] to-white pt-10">
+
     <div className="max-w-4xl mx-auto px-6 py-12 pt-24 text-justify text-gray-800">
       <h1 className="text-3xl font-bold mb-6">Cancellation Policy</h1>
 
@@ -201,6 +203,7 @@ const CancellationPolicy: React.FC = () => {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
       </section>
+    </div>
     </div>
   );
 };
