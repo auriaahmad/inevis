@@ -18,11 +18,13 @@
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.4.10",
     "inevis": "file:",
+    "lucide-react": "^0.479.0",
     "next": "^15.1.4",
     "next-seo": "^6.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "recharts": "^2.15.1",
     "swiper": "^11.2.5"
   },
   "devDependencies": {

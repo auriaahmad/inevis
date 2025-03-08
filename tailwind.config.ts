@@ -1,5 +1,6 @@
 // tailwind.config.js
 import type { Config } from 'tailwindcss';
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 export default {
   content: [
@@ -9,17 +10,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        black: 'var(--color-primary-black)',
-        charcoal: 'var(--color-charcoal-gray)',
-        dim: 'var(--color-dim-gray)',
-        lightGray: 'var(--color-light-gray)',
-        gainsboro: 'var(--color-gainsboro)',
-        darkGreen: 'var(--color-dark-green)',
-        forestGreen: 'var(--color-forest-green)',
-        seaGreen: 'var(--color-sea-green)',
-        mediumSeaGreen: 'var(--color-medium-sea-green)',
-        paleGreen: 'var(--color-pale-green)',
+      fontFamily: {
+        poppins: ["Poppins", ...fontFamily.sans], // Poppins
+        montserrat: ["Montserrat", ...fontFamily.sans], // Montserrat
       },
     },
   },

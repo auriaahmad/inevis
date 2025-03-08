@@ -1,127 +1,148 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
-import { Switch } from "@headlessui/react";
 
-export default function ContactForm() {
-  const [agreed, setAgreed] = useState(false);
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    jobTitle: "",
+    companyName: "",
+    workEmail: "",
+    helpType: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Form submitted successfully!");
+    console.log("Form Submitted:", formData);
   };
 
   return (
-    <div className="isolate bg-gradient-to-br from-[#D7E5F8] to-white px-4 sm:px-6 lg:px-8 py-24 sm:py-32 flex justify-center">
-      <div className="w-full max-w-4xl lg:w-3/5">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="bg-gradient-to-tl from-[#D7E5F8] to-white p-8 rounded-lg shadow-md">
-            <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              Get in touch
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Do you have any questions? Talk to us!
-
+    <div className="bg-gradient-to-br from-[#D7E5F8] to-white pt-32 pb-20">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md"
+      >
+        {/* Contact Info Section */}
+        <div className="mb-8">
+          {/* <h2 className="text-3xl font-bold text-gray-900">Get in Touch</h2> */}
+          <h6 className="text-3xl font-bold text-gray-900">
+            Reach out to us anytime.
+          </h6>
+          <h6 className="text-3xl font-bold text-gray-900">
+            We’d love to hear from you.
+          </h6>
+          <div className="mt-4 text-gray-700">
+            <p><strong>Address: </strong>Westendstraße 16-22</p>
+            <p>60325 Frankfurt am Main</p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:info@inevis.de" className="text-teal-500 hover:underline">
+                info@inevis.de
+              </a>
             </p>
-            <div className="mt-6 space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="text-gray-600">📍 Hohenstaufenring 62, 50674 Köln, Germany</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-gray-600">📞 +1 (555) 234-5678</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-gray-600">✉ hello@example.com</span>
-              </div>
-              <iframe
-                className="w-full h-64 rounded-lg shadow-lg"
-                src="https://www.google.com/maps?q=Hohenstaufenring+62,+50674+K%C3%B6ln,+Germany&output=embed"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          <div className="border-l border-gray-300 pl-10 flex items-center">
-            <form onSubmit={handleSubmit} className="space-y-6 w-full">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="first-name" className="block text-sm font-semibold text-gray-900">
-                    First name
-                  </label>
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="last-name" className="block text-sm font-semibold text-gray-900">
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-900">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  autoComplete="email"
-                  className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-900">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows={4}
-                  className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
-                />
-              </div>
-              <div className="flex items-center gap-x-4">
-                <Switch
-                  checked={agreed}
-                  onChange={setAgreed}
-                  className={`${agreed ? "bg-teal-400" : "bg-gray-200"
-                    } relative inline-flex h-6 w-11 items-center rounded-full transition-colors`}
-                >
-                  <span className="sr-only">Agree to terms</span>
-                  <span
-                    className={`${agreed ? "translate-x-6" : "translate-x-1"
-                      } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
-                  />
-                </Switch>
-                <span className="text-sm text-gray-600">
-                  By selecting this, you agree to our
-                  <a href="/routes/data-protection" className="font-semibold text-indigo-600">&nbsp;privacy policy.</a>
-                </span>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-teal-400 px-3.5 py-2.5 text-white rounded-md shadow hover:bg-teal-500 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
-                >
-                  Send message
-                </button>
-              </div>
-            </form>
+            <p>
+            {/* <strong>Phone:</strong>{" "}
+              <a href="tel:+491234567890" className="text-teal-500 hover:underline">
+                +49 123 456 7890
+              </a> */}
+            </p>
           </div>
         </div>
-      </div>
+
+        {/* Form Section */}
+        <h2 className="text-3xl font-bold text-gray-900">Let’s connect.</h2>
+        <p className="text-gray-600 mt-2">
+          Complete the form and an expert will contact you shortly.
+        </p>
+
+        <form onSubmit={handleSubmit} className="mt-6 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First name*"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+              className="border border-gray-300 p-3 rounded-md w-full bg-gray-50"
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last name*"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+              className="border border-gray-300 p-3 rounded-md w-full bg-gray-50"
+            />
+            <input
+              type="text"
+              name="jobTitle"
+              placeholder="Job title"
+              value={formData.jobTitle}
+              onChange={handleChange}
+              className="border border-gray-300 p-3 rounded-md w-full bg-gray-50"
+            />
+            <input
+              type="text"
+              name="companyName"
+              placeholder="Company name"
+              value={formData.companyName}
+              onChange={handleChange}
+              className="border border-gray-300 p-3 rounded-md w-full bg-gray-50"
+            />
+            <input
+              type="email"
+              name="workEmail"
+              placeholder="Work email*"
+              value={formData.workEmail}
+              onChange={handleChange}
+              required
+              className="border border-gray-300 p-3 rounded-md w-full bg-gray-50"
+            />
+            <select
+              name="helpType"
+              value={formData.helpType}
+              onChange={handleChange}
+              required
+              className="border border-gray-300 p-3 rounded-md w-full bg-gray-50"
+            >
+              <option value="">— Please choose an option —</option>
+              <option value="support">Support</option>
+              <option value="sales">Sales Inquiry</option>
+              <option value="partnership">Partnership</option>
+            </select>
+          </div>
+
+          <textarea
+            name="message"
+            placeholder="Let us know more about what you're looking for*"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 p-3 rounded-md w-full h-32 resize-none bg-gray-50"
+          ></textarea>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="bg-teal-400 text-white px-6 py-3 rounded-md w-full md:w-auto hover:bg-teal-500 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </motion.div>
     </div>
   );
-}
+};
+
+export default ContactForm;

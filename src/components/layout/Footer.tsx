@@ -1,80 +1,66 @@
+"use client";
+import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaXTwitter, FaGithub, FaYoutube } from "react-icons/fa6";
+import { Mail } from "lucide-react";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:flex lg:items-center lg:justify-between">
-        {/* Left Section: Branding & Social Media */}
-        <div className="lg:w-1/3">
-          <div className="flex items-center space-x-2">
-            <span className="text-indigo-400 text-3xl font-bold">⚡</span>
-          </div>
-          <p className="mt-4 text-sm leading-relaxed">
-            Making the world a better place through constructing elegant hierarchies.
-          </p>
+    <footer className="bg-white text-gray-900 border-t py-8 px-6 lg:px-20">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 items-center text-center md:text-left">
+        
+        {/* Logo */}
+        <div className="flex justify-center md:justify-start">
+          <Image
+            src="/logo/logoNav.png"
+            alt="inevis Logo"
+            width={150}
+            height={50}
+          />
+        </div>
 
-          {/* Social Icons */}
-          <div className="mt-4 flex space-x-4">
-            <Link href="/routes/" className="hover:text-white">
-              <FaFacebookF size={20} />
-            </Link>
-            <Link href="/routes/" className="hover:text-white">
-              <FaInstagram size={20} />
-            </Link>
-            <Link href="/routes/" className="hover:text-white">
-              <FaXTwitter size={20} />
-            </Link>
-            <Link href="/routes/" className="hover:text-white">
-              <FaGithub size={20} />
-            </Link>
-            <Link href="/routes/" className="hover:text-white">
-              <FaYoutube size={20} />
+        {/* Address */}
+        <div>
+          <h4 className="font-semibold text-gray-900">inevis GmbH</h4>
+          <p className="text-gray-600 text-sm">Westendstraße 16-22</p>
+          <p className="text-gray-600 text-sm">60325 Frankfurt am Main</p>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <div className="flex items-center justify-center md:justify-start space-x-2">
+            <Mail className="text-blue-600 w-5 h-5" />
+            <Link href="mailto:info@inevis.de" className="text-blue-600 text-sm hover:underline">
+              info@inevis.de
             </Link>
           </div>
         </div>
 
-        {/* Right Section: Navigation */}
-        <div className="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:mt-0 lg:w-2/3">
-          {/* Company */}
-          <div>
-            <h3 className="text-sm font-semibold text-white">Company</h3>
-            <ul className="mt-4 space-y-2">
-              <li><Link href="/routes/about-us" className="hover:text-white">About Us</Link></li>
-              <li><Link href="/routes/become-partner" className="hover:text-white">Become a Partner</Link></li>
-              <li><Link href="/routes/contact-us" className="hover:text-white">Contact</Link></li>
-              <li><Link href="/routes/portfolio" className="hover:text-white">Portfolio</Link></li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="text-sm font-semibold text-white">Legal</h3>
-            <ul className="mt-4 space-y-2">
-              <li><Link href="/routes/terms-of-use" className="hover:text-white">Terms of Use</Link></li>
-              <li><Link href="/routes/general-terms" className="hover:text-white">General Terms & Conditions</Link></li>
-              <li><Link href="/routes/cancellation-policy" className="hover:text-white">Cancellation Policy</Link></li>
-              <li><Link href="/routes/data-protection" className="hover:text-white">Data Protection</Link></li>
-              <li><Link href="/routes/impressum" className="hover:text-white">Impressum</Link></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-sm font-semibold text-white">Support</h3>
-            <ul className="mt-4 space-y-2">
-              <li><Link href="/routes/help-center" className="hover:text-white">Help Center</Link></li>
-              <li><Link href="/routes/faqs" className="hover:text-white">FAQs</Link></li>
-              <li><Link href="/routes/contact-us" className="hover:text-white">Contact Support</Link></li>
-            </ul>
-          </div>
+        {/* Contact Us Button */}
+        <div className="text-center md:text-left">
+          <Link href="/routes/contact-us">
+            <button className="mt-2 px-6 py-2 bg-teal-500 text-white font-semibold rounded-full shadow-md hover:bg-teal-600 transition">
+              Contact Us
+            </button>
+          </Link>
         </div>
+
       </div>
 
-      {/* Copyright Section */}
-      <div className="border-t border-gray-700 py-6 text-center text-xs">
-        <p>&copy; {new Date().getFullYear()} Your Company, Inc. All rights reserved.</p>
+      {/* Bottom Section: Responsive Layout */}
+      <div className="border-t mt-6 pt-4 text-sm text-gray-600">
+        {/* Center content on small screens */}
+        <div className="flex flex-col items-center md:flex-row md:justify-between">
+          <p className="text-center md:text-left">&copy; Copyright inevis 2025</p>
+          <div className="flex flex-wrap justify-center gap-4 mt-2 md:mt-0">
+            <Link href="/routes/about-us" className="hover:underline">ABOUT US</Link>
+            <Link href="/routes/services" className="hover:underline">SERVICES</Link>
+            <Link href="/routes/contact-us" className="hover:underline">CONTACT US</Link>
+            <Link href="/routes/impressum" className="hover:underline">IMPRESSUM</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -2,6 +2,7 @@ import React from "react";
 import "./globals.scss"; // Import global styles
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/cookies";
 export const metadata = {
   title: "inevis",
   description:
@@ -21,6 +22,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <body>
         <Header />
         {children}
+        <CookieConsent />
         <Footer />
       </body>
     </html>

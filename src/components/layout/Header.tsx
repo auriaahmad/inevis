@@ -7,10 +7,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Become a Partner", href: "/routes/become-partner" },
+  { name: "Home", href: "/" },
   { name: "About Us", href: "/routes/about-us" },
+  { name: "Services", href: "/routes/services" },
   { name: "Contact", href: "/routes/contact-us" },
-  { name: "Portfolio", href: "/routes/portfolio" },
 ];
 
 export default function Header() {

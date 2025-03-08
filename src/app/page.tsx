@@ -1,15 +1,30 @@
 import React from 'react';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import WhoWeAre from '@/components/WhoWeAre';
+import Hero from '@/components/landing-page/Hero';
+// import Features from '@/components/landing-page/Features';
+// import WhoWeAre from '@/components/landing-page/WhoWeAre';
+import BuildingFuture from '@/components/landing-page/BuildingFuture';
+import TransformData from '@/components/landing-page/TransformData';
 const HomePage: React.FC = () => {
   return (
     <div>
       <Hero />
-      <WhoWeAre/>
-      <Features />
+  
+      {/* Smooth Gradient Transition */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-32"></div>
+      </div>
+  
+      <div className="bg-gradient-to-t from-[#D7E5F8] to-teal-50">
+        <BuildingFuture />
+        <TransformData />
+      </div>
+  
+      {/* <WhoWeAre/> */}
+      {/* <Features /> */}
     </div>
   );
+  
+  
 };
 
 export default HomePage;

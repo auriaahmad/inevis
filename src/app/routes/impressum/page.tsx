@@ -50,7 +50,7 @@ const Impressum: React.FC = () => {
         <p className="mb-4">
           <strong>Vertretungsberechtigter Geschäftsführer:</strong>
           <br />
-          Herr Ali Kazmi
+          Herr Ali Raza
         </p>
 
         {/* Tax ID */}
@@ -58,7 +58,8 @@ const Impressum: React.FC = () => {
           <strong>
             Umsatzsteuer-Identifikationsnummer
             <br />
-            gemäß § 27 a Umsatzsteuergesetz: DE 271999769
+            gemäß § 27 a Umsatzsteuergesetz:
+            <span className="block md:inline"> DE 271999769</span>
           </strong>{" "}
 
         </p>
@@ -76,7 +77,7 @@ const Impressum: React.FC = () => {
         <p className="mb-4">
           <strong>Inhaltlich Verantwortlicher gemäß § 6 MDStV</strong>
           <br />
-          Herr Ali Kazmi (Anschrift wie oben)
+          Herr Ali Raza (Anschrift wie oben)
         </p>
 
         {/* Image Sources */}
