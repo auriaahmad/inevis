@@ -11,8 +11,19 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", ...fontFamily.sans], // Poppins
-        montserrat: ["Montserrat", ...fontFamily.sans], // Montserrat
+        poppins: ["Poppins", ...fontFamily.sans],
+        montserrat: ["Montserrat", ...fontFamily.sans],
+      },
+      animation: {
+        // Smoother and infinite animation
+        marquee: 'marquee 25s linear infinite',
+        marquee2: 'marquee 25s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
     },
   },

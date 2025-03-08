@@ -4,6 +4,7 @@ import Hero from '@/components/landing-page/Hero';
 // import WhoWeAre from '@/components/landing-page/WhoWeAre';
 import BuildingFuture from '@/components/landing-page/BuildingFuture';
 import TransformData from '@/components/landing-page/TransformData';
+// import Marquee from '@/components/marquee';
 const HomePage: React.FC = () => {
   return (
     <div>
@@ -18,7 +19,7 @@ const HomePage: React.FC = () => {
         <BuildingFuture />
         <TransformData />
       </div>
-  
+      
       {/* <WhoWeAre/> */}
       {/* <Features /> */}
     </div>
