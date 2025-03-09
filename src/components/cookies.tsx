@@ -6,7 +6,7 @@ export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if the user has already accepted cookies
+    // Check if the user has already responded to the cookie consent
     const consentGiven = localStorage.getItem("cookieConsent");
     if (!consentGiven) {
       setIsVisible(true);
@@ -14,7 +14,12 @@ export default function CookieConsent() {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "true"); // Save acceptance in localStorage
+    localStorage.setItem("cookieConsent", "accepted"); // Store acceptance
+    setIsVisible(false);
+  };
+
+  const handleReject = () => {
+    localStorage.setItem("cookieConsent", "rejected"); // Store rejection
     setIsVisible(false);
   };
 
@@ -28,12 +33,20 @@ export default function CookieConsent() {
           </a>
           .
         </p>
-        <button
-          onClick={handleAccept}
-          className="mt-3 md:mt-0 bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
-        >
-          Accept
-        </button>
+        <div className="flex gap-3 mt-3 md:mt-0">
+          <button
+            onClick={handleAccept}
+            className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
+          >
+            Accept
+          </button>
+          <button
+            onClick={handleReject}
+            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
+          >
+            Reject
+          </button>
+        </div>
       </div>
     )
   );

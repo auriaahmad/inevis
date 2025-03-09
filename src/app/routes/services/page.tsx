@@ -23,21 +23,19 @@ const Services = () => {
         {/* Tabs */}
         <div className="flex justify-center gap-6 mb-8">
           <button
-            className={`px-6 py-2 rounded-full font-semibold transition ${
-              activeTab === "installation"
+            className={`px-6 py-2 rounded-full font-semibold transition ${activeTab === "installation"
                 ? "bg-teal-400 text-white"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
+              }`}
             onClick={() => setActiveTab("installation")}
           >
             Telecom Installation
           </button>
           <button
-            className={`px-6 py-2 rounded-full font-semibold transition ${
-              activeTab === "invision"
+            className={`px-6 py-2 rounded-full font-semibold transition ${activeTab === "invision"
                 ? "bg-teal-400 text-white"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
+              }`}
             onClick={() => setActiveTab("invision")}
           >
             InVision Monitoring
@@ -59,7 +57,7 @@ const Services = () => {
                   Seamless Telecom Installation
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                At Inevis, we specialize in comprehensive telecom infrastructure installation, ensuring seamless and future-ready network deployment. Our expertise spans the entire installation process, from site planning and structural design to the construction and setup of mobile radio towers, containers, and transmission networks. With expertise in multi-vendor network deployment, our fully trained installation field teams operate across Europe, delivering high-quality services tailored to diverse network requirements.
+                  At Inevis, we specialize in comprehensive telecom infrastructure installation, ensuring seamless and future-ready network deployment. Our expertise spans the entire installation process, from site planning and structural design to the construction and setup of mobile radio towers, containers, and transmission networks. With expertise in multi-vendor network deployment, our fully trained installation field teams operate across Europe, delivering high-quality services tailored to diverse network requirements.
                 </p>
               </div>
               <motion.div
@@ -85,7 +83,7 @@ const Services = () => {
                   Multi-Vendor Network Deployment
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                With a skilled field force capable of deploying multi-vendor solutions, we guarantee the highest industry standards in network performance, scalability, and reliability. Partner with Inevis for a robust, expertly deployed, and future-proof telecom infrastructure—built to support the demands of an ever-evolving digital world.
+                  With a skilled field force capable of deploying multi-vendor solutions, we guarantee the highest industry standards in network performance, scalability, and reliability. Partner with Inevis for a robust, expertly deployed, and future-proof telecom infrastructure—built to support the demands of an ever-evolving digital world.
                 </p>
               </div>
             </div>
@@ -97,7 +95,7 @@ const Services = () => {
                   Cutting-Edge Antenna Installations
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                We handle antenna installation, commissioning, and integration of all mobile technologies, along with system rollouts, swaps, and upgrades to keep networks at peak performance. Our team also excels in turnkey WLAN and in-building mobile service installations, ensuring optimal coverage in both outdoor and indoor environments. Additionally, we manage the dismantling, reconstruction, and responsible disposal of mobile sites, facilitating smooth network transitions and modernizations.
+                  We handle antenna installation, commissioning, and integration of all mobile technologies, along with system rollouts, swaps, and upgrades to keep networks at peak performance. Our team also excels in turnkey WLAN and in-building mobile service installations, ensuring optimal coverage in both outdoor and indoor environments. Additionally, we manage the dismantling, reconstruction, and responsible disposal of mobile sites, facilitating smooth network transitions and modernizations.
                 </p>
               </div>
               <motion.div
@@ -130,7 +128,7 @@ const Services = () => {
                   InVision – Smart Data Monitoring
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                InVision is a cutting-edge software solution developed by Inevis, designed to help telecommunication businesses seamlessly monitor, visualize, and analyze their data through Network probes. Built for telecom companies and enterprises, InVision transforms complex datasets into real-time, actionable insights, ensuring improved network performance, operational efficiency, and resource optimization.
+                  InVision is a cutting-edge software solution developed by Inevis, designed to help telecommunication businesses seamlessly monitor, visualize, and analyze their data through Network probes. Built for telecom companies and enterprises, InVision transforms complex datasets into real-time, actionable insights, ensuring improved network performance, operational efficiency, and resource optimization.
                 </p>
               </div>
             </div>
@@ -142,7 +140,7 @@ const Services = () => {
                   Data-Driven Decision Making
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                o	With advanced automation, intuitive dashboards, and built-in analytical tools, InVision empowers businesses across Europe and Africa to make faster, smarter, and data-driven decisions. Whether it’s monitoring telecom infrastructure, optimizing network resources, or enhancing digital operations, InVision is your trusted end-to-end data intelligence partner for a more connected and efficient future.
+                  With advanced automation, intuitive dashboards, and built-in analytical tools, InVision empowers businesses across Europe and Africa to make faster, smarter, and data-driven decisions. Whether it’s monitoring telecom infrastructure, optimizing network resources, or enhancing digital operations, InVision is your trusted end-to-end data intelligence partner for a more connected and efficient future.
                 </p>
               </div>
               <motion.div
@@ -157,13 +155,13 @@ const Services = () => {
         )}
       </div>
       <motion.h2
-          className="text-4xl pt-20 pb-8 font-bold text-center text-gray-900 mb-10"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Satisfied Customers
-        </motion.h2>
+        className="text-4xl pt-20 pb-8 font-bold text-center text-gray-900 mb-10"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Satisfied Customers
+      </motion.h2>
       <Marquee />
     </section>
 

@@ -83,6 +83,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className="block text-sm font-semibold text-gray-900 hover:text-indigo-600"
+                onClick={() => setMobileMenuOpen(false)} // Close menu on click
               >
                 {item.name}
               </Link>
