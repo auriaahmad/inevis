@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { JobType } from "@/type";
+import { JobType } from "@/app/types";
 
 interface JobCardProps {
   job: JobType;
