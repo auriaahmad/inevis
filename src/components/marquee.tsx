@@ -1,5 +1,6 @@
 // Marquee.tsx
 import React from "react";
+import Image from "next/image";
 
 const logos = [
   "/assets/customers/1.jpg",
@@ -21,8 +22,10 @@ const Marquee: React.FC = () => {
           <div className="flex animate-marquee whitespace-nowrap">
             {logos.map((logo, index) => (
               <div key={`logo-1-${index}`} className="mx-3 sm:mx-5 md:mx-8 lg:mx-10 flex items-center justify-center">
-                <img 
-                  src={logo} 
+                <Image 
+                  src={logo}
+                  height={200}
+                  width={200} 
                   alt={`Customer ${index + 1}`} 
                   className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 hover:scale-110 filter grayscale hover:grayscale-0" 
                 />
