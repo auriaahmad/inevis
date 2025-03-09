@@ -11,7 +11,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="relative text-justify bg-gradient-to-r from-[#D7E5F8] to-white min-h-screen flex items-center">
+    <section className="relative text-justify bg-gradient-to-r from-[#D7E5F8] to-white min-h-screen flex items-center pt-44">
       <motion.div
         className="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
         initial={{ opacity: 0, y: 50 }}

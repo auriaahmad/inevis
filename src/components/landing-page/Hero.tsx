@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <motion.div
-      className="relative shadow-lg min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
+      className="pt-28 relative shadow-lg min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
       style={{
         backgroundImage: "url('/assets/telecom.jpg')",
         WebkitMaskImage:
