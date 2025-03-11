@@ -52,10 +52,10 @@ const Footer = () => {
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           <p className="text-center md:text-left">&copy; Copyright inevis 2025</p>
           <div className="flex flex-wrap justify-center gap-4 mt-2 md:mt-0">
-            <Link href="/routes/about-us" className="hover:underline">ABOUT US</Link>
-            <Link href="/routes/services" className="hover:underline">SERVICES</Link>
-            <Link href="/routes/contact-us" className="hover:underline">CONTACT US</Link>
-            <Link href="/routes/impressum" className="hover:underline">IMPRINT</Link>
+            <Link href="/routes/about-us" className="hover:underline">About Us</Link>
+            <Link href="/routes/services" className="hover:underline">Services</Link>
+            <Link href="/routes/contact-us" className="hover:underline">Contact Us</Link>
+            <Link href="/routes/impressum" className="hover:underline">Imprint</Link>
           </div>
         </div>
       </div>
