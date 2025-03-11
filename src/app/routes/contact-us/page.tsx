@@ -40,26 +40,9 @@ const ContactForm = () => {
           <h6 className="text-3xl font-bold text-gray-900">
             We’d love to hear from you.
           </h6>
-          <div className="mt-4 text-gray-700">
-            <p><strong>Address: </strong>Westendstraße 16-22</p>
-            <p>60325 Frankfurt am Main</p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a href="mailto:info@inevis.de" className="text-teal-500 hover:underline">
-                info@inevis.de
-              </a>
-            </p>
-            <p>
-            {/* <strong>Phone:</strong>{" "}
-              <a href="tel:+491234567890" className="text-teal-500 hover:underline">
-                +49 123 456 7890
-              </a> */}
-            </p>
-          </div>
         </div>
-
         {/* Form Section */}
-        <h2 className="text-3xl font-bold text-gray-900">Let’s connect.</h2>
+        <h2 className="text-3xl font-bold text-gray-900">Let’s talk</h2>
         <p className="text-gray-600 mt-2">
           Complete the form and an expert will contact you shortly.
         </p>

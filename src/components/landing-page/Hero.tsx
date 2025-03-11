@@ -6,17 +6,10 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <motion.div
-      className="pt-28 relative shadow-lg min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
+      className="pt-28 relative min-h-screen flex items-center justify-start text-left bg-cover bg-center px-10 lg:px-20"
       style={{
         backgroundImage: "url('/assets/telecom.jpg')",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.6) 95%, rgba(0, 0, 0, 0) 100%)",
-        maskImage:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.6) 95%, rgba(0, 0, 0, 0) 100%)",
       }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
     >
       {/* White Tint Overlay */}
       <motion.div
@@ -57,12 +50,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          <Link
-            href="/routes/contact-us"
-            className="rounded-md bg-teal-400 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-teal-500"
-          >
-            Contact Us
-          </Link>
           <Link
             href="/routes/about-us"
             className="text-sm font-semibold text-gray-900 hover:text-indigo-600"

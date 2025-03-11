@@ -37,7 +37,7 @@ const BuildingFuture = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className={`flex flex-col md:flex-row items-center gap-10 mb-16 ${
-            index % 2 === 0 ? "md:flex-row-reverse" : ""
+            index % 2 === 1 ? "md:flex-row-reverse" : ""
           }`}
         >
           {/* Image */}

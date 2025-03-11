@@ -55,7 +55,7 @@ const Footer = () => {
             <Link href="/routes/about-us" className="hover:underline">ABOUT US</Link>
             <Link href="/routes/services" className="hover:underline">SERVICES</Link>
             <Link href="/routes/contact-us" className="hover:underline">CONTACT US</Link>
-            <Link href="/routes/impressum" className="hover:underline">IMPRESSUM</Link>
+            <Link href="/routes/impressum" className="hover:underline">IMPRINT</Link>
           </div>
         </div>
       </div>

@@ -3,22 +3,30 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Marquee from "@/components/marquee";
+import ServiceSection from "@/components/services/ServicesSection";
+import WhyChooseInevis from "@/components/services/WhyChooseInevis";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("installation");
 
   return (
-    <section className="min-h-screen pt-44 bg-gradient-to-l from-white to-sky-100 py-16">
+    <section className="min-h-screen pt-44 bg-gradient-to-l from-white to-sky-100">
       <div className="container mx-auto px-6 lg:px-20">
         {/* Title */}
         <motion.h2
-          className="text-4xl font-bold text-center text-gray-900 mb-10"
+          className="text-6xl font-bold text-center text-gray-900 mb-10"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Our Services
         </motion.h2>
+
+        <ServiceSection />
+        
+        <div className="mb-20 w-full h-px bg-gray-300 mt-8"></div>
+        <WhyChooseInevis />
+        <div className="mb-20 w-full h-px bg-gray-300 mt-8"></div>
 
         {/* Tabs */}
         <div className="flex justify-center gap-6 mb-8">

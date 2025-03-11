@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { JobType } from "@/app/types";
 import { motion, useScroll, useAnimation } from "framer-motion";
+import { FiSearch } from "react-icons/fi";
 
 const jobs: JobType[] = [
   {
@@ -68,7 +69,7 @@ export default function CareerPage() {
   const [openJobIndex, setOpenJobIndex] = useState<number | null>(null);
   const { scrollY } = useScroll();
   const controls = useAnimation();
-  
+
   // Filter jobs based on search query
   const filteredJobs = jobs.filter((job) =>
     job.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -78,7 +79,7 @@ export default function CareerPage() {
   const toggleJob = (index: number) => {
     setOpenJobIndex(openJobIndex === index ? null : index);
   };
-  
+
   // Animate elements as user scrolls
   useEffect(() => {
     const updateScroll = () => {
@@ -86,7 +87,7 @@ export default function CareerPage() {
         controls.start("visible");
       }
     };
-    
+
     const unsubscribe = scrollY.onChange(updateScroll);
     return () => unsubscribe();
   }, [scrollY, controls]);
@@ -94,49 +95,49 @@ export default function CareerPage() {
   // Animation variants
   const headerVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.6, 
-        ease: "easeOut" 
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
       }
     }
   };
-  
+
   const searchVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
-      transition: { 
-        duration: 0.5, 
+      transition: {
+        duration: 0.5,
         delay: 0.2,
-        ease: "easeOut" 
+        ease: "easeOut"
       }
     }
   };
-  
+
   const jobItemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({ 
-      opacity: 1, 
+    visible: (i: number) => ({
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.5, 
+      transition: {
+        duration: 0.5,
         delay: 0.1 * i,
-        ease: "easeOut" 
+        ease: "easeOut"
       }
     })
   };
-  
+
   const ctaSectionVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { 
-        duration: 0.7, 
-        ease: "easeOut" 
+      transition: {
+        duration: 0.7,
+        ease: "easeOut"
       }
     }
   };
@@ -144,8 +145,8 @@ export default function CareerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-sky-200 to-white pt-32 px-4">
       {/* Header Section */}
-      <motion.section 
-        className="bg-teal-400 text-white py-16 text-center"
+      <motion.section
+        className="bg-transparent to-white text-gray-900 py-16 text-center"
         initial="hidden"
         animate="visible"
         variants={headerVariants}
@@ -162,24 +163,23 @@ export default function CareerPage() {
 
       {/* Search Bar */}
       <div className="container mx-auto px-4 mt-8">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={searchVariants}
-        >
-          <input
-            type="text"
-            placeholder="Search job titles..."
-            className="w-full max-w-lg px-4 py-2 border rounded-md focus:ring-2 focus:ring-teal-500"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
+        <motion.div initial="hidden" animate="visible" variants={searchVariants}>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search job titles..."
+              className="w-full px-4 py-2 border rounded-md pl-10 focus:ring-2 focus:ring-teal-500"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-teal-400 text-xl" />
+          </div>
         </motion.div>
       </div>
 
       {/* Job Listings */}
       <section className="container mx-auto px-4 py-12">
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold mb-6 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -189,7 +189,7 @@ export default function CareerPage() {
         </motion.h2>
 
         {filteredJobs.length === 0 ? (
-          <motion.p 
+          <motion.p
             className="text-center text-gray-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -200,8 +200,8 @@ export default function CareerPage() {
         ) : (
           <div className="space-y-6">
             {filteredJobs.map((job, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="border rounded-lg shadow-md p-6 bg-white"
                 custom={index}
                 initial="hidden"
@@ -225,7 +225,7 @@ export default function CareerPage() {
 
                 {/* Job Details (Expandable Section) */}
                 {openJobIndex === index && (
-                  <motion.div 
+                  <motion.div
                     className="mt-4 space-y-4"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
@@ -242,7 +242,7 @@ export default function CareerPage() {
                       <h3 className="font-semibold text-gray-700">Responsibilities:</h3>
                       <ul className="list-disc list-inside text-gray-600">
                         {job.responsibilities.map((resp, i) => (
-                          <motion.li 
+                          <motion.li
                             key={i}
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -258,7 +258,7 @@ export default function CareerPage() {
                       <h3 className="font-semibold text-gray-700">Requirements:</h3>
                       <ul className="list-disc list-inside text-gray-600">
                         {job.requirements.map((req, i) => (
-                          <motion.li 
+                          <motion.li
                             key={i}
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -269,14 +269,14 @@ export default function CareerPage() {
                         ))}
                       </ul>
                     </div>
-                    <motion.div 
+                    <motion.div
                       className="pt-5"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: 0.2 }}
                     >
                       <a href="mailto:careers@inevis.com">
-                        <motion.button 
+                        <motion.button
                           className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
@@ -294,7 +294,7 @@ export default function CareerPage() {
       </section>
 
       {/* Apply Section */}
-      <motion.section 
+      <motion.section
         className="bg-gradient-to-r from-sky-200 to-white py-16"
         initial="hidden"
         whileInView="visible"
@@ -307,7 +307,7 @@ export default function CareerPage() {
             We&apos;re looking for talented individuals who are passionate about innovation in telecommunications.
           </p>
           <a href="mailto:careers@inevis.com">
-            <motion.button 
+            <motion.button
               className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

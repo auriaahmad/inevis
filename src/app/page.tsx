@@ -11,11 +11,11 @@ const HomePage: React.FC = () => {
       <Hero />
   
       {/* Smooth Gradient Transition */}
-      <div className="relative">
+      {/* <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-32"></div>
-      </div>
+      </div> */}
   
-      <div className="bg-gradient-to-t from-[#D7E5F8] to-teal-50">
+      <div className="bg-gradient-to-b from-[#D7E5F8] to-white">
         <BuildingFuture />
         <TransformData />
       </div>
