@@ -35,7 +35,7 @@ const Impressum: React.FC = () => {
         </p>
 
         {/* Bank Info */}
-        <h2 className="text-xl font-semibold mt-6">Bankverbindung:</h2>
+        <strong>Bankverbindung:</strong>
         <p className="mb-4">
           Kreditinstitut: Commerzbank
           <br />

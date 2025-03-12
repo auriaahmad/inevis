@@ -3,8 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Marquee from "@/components/marquee";
-import ServiceSection from "@/components/services/ServicesSection";
-import WhyChooseInevis from "@/components/services/WhyChooseInevis";
+// import ServiceSection from "@/components/services/ServicesSection";
+// import WhyChooseInevis from "@/components/services/WhyChooseInevis";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("installation");
@@ -22,11 +22,11 @@ const Services = () => {
           Our Services
         </motion.h2>
 
-        <ServiceSection />
+        {/* <ServiceSection />
         
         <div className="mb-20 w-full h-px bg-gray-300 mt-8"></div>
         <WhyChooseInevis />
-        <div className="mb-20 w-full h-px bg-gray-300 mt-8"></div>
+        <div className="mb-20 w-full h-px bg-gray-300 mt-8"></div> */}
 
         {/* Tabs */}
         <div className="flex justify-center gap-6 mb-8">

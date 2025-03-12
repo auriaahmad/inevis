@@ -15,11 +15,6 @@ const content = [
     image: "/assets/landingPage/2.jpg",
   },
   {
-    title: "Sustainable Network Expansion",
-    text: "Need to dismantle or reconstruct mobile sites? We handle everything, including safe disposal, ensuring efficiency and sustainability.",
-    image: "/assets/landingPage/3.jpg",
-  },
-  {
     title: "Seamless Connectivity, Future-Ready",
     text: "Whether expanding your coverage or upgrading existing sites, we provide future-ready, high-performance solutions, so you can focus on delivering seamless, uninterrupted connectivity to your customers.",
     image: "/assets/landingPage/4.jpg",
