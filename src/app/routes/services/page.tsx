@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Marquee from "@/components/marquee";
+// import Marquee from "@/components/marquee";
 // import ServiceSection from "@/components/services/ServicesSection";
 // import WhyChooseInevis from "@/components/services/WhyChooseInevis";
 
