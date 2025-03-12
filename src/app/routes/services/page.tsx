@@ -162,15 +162,6 @@ const Services = () => {
           </motion.div>
         )}
       </div>
-      <motion.h2
-        className="text-4xl px-18 pt-20 pb-8 font-bold text-center text-gray-900 mb-10"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Satisfied Customers
-      </motion.h2>
-      <Marquee />
     </section>
 
   );

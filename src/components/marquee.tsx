@@ -27,7 +27,7 @@ const Marquee: React.FC = () => {
                   height={200}
                   width={200} 
                   alt={`Customer ${index + 1}`} 
-                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 hover:scale-110 filter grayscale hover:grayscale-0" 
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain" 
                 />
               </div>
             ))}
@@ -41,11 +41,11 @@ const Marquee: React.FC = () => {
             {logos.map((logo, index) => (
               <div key={`logo-2-${index}`} className="mx-3 sm:mx-5 md:mx-8 lg:mx-10 flex items-center justify-center">
                 <Image 
-                  src={logo} 
-                  width={200}
+                  src={logo}
                   height={200}
+                  width={200} 
                   alt={`Customer ${index + 1}`} 
-                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 hover:scale-110 filter grayscale hover:grayscale-0" 
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain" 
                 />
               </div>
             ))}
